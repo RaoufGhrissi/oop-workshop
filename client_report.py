@@ -2,8 +2,9 @@ from http import client
 import psycopg2
 import psycopg2.extras
 from client import Client
+from clientOut import ClientOut
 #heritage, inheritence
-class ClientReport(Client):
+class ClientReport(ClientOut):
     def __init__(self, firstname, lastname, total_balance, id):
         super().__init__(firstname, lastname, id)
         self.total_balance = total_balance
